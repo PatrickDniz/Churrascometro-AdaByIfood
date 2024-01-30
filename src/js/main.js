@@ -36,21 +36,24 @@ const calcPeople = () => {
     sumPeople = sumPeople + parseInt(value.innerText);
     const type = card.getAttribute('data-type');
     if(type == 'adultos'){
-      sumMeet = sumMeet + 0.4;
-      sumBread = sumBread + 2;
+      sumMeet = sumMeet + 0.4 * value.innerText;
+      sumBread = sumBread + 2 * value.innerText;
     } else if(type == 'criancas') {
-      sumMeet = sumMeet + 0.2;
-      sumBread = sumBread + 1;
+      sumMeet = sumMeet + 0.2 * value.innerText;
+      sumBread = sumBread + 1 * value.innerText;
+    } else if(type == 'bebados'){
+      sumAlcool = sumAlcool + 3 * value.innerText;
     } else if(type == 'esfomeados'){
-      sumMeet = sumMeet + 1;
-      sumBread = sumBread + 5;
+      sumMeet = sumMeet + 1 * value.innerText;
+      sumBread = sumBread + 5 * value.innerText;
+      sumAlcool = sumAlcool + 6 * value.innerText;
     }
-    sumCoal = sumCoal + 1;
-    sumSalt = sumSalt +  0.04;
-    sumIce = sumIce + 0.5;
-    sumRefri = sumRefri + 0.4;
-    sumWater = sumWater + 0.2;
-    sumAlcool = sumAlcool + 3;
+    sumCoal = sumCoal + 1 * value.innerText;
+    sumSalt = sumSalt +  0.04 * value.innerText;
+    sumIce = sumIce + 0.5 * value.innerText;
+    sumRefri = sumRefri + 0.4 * value.innerText;
+    sumWater = sumWater + 0.2 * value.innerText;
+
   });
   const infos = [sumMeet, sumBread, sumCoal, sumSalt, sumIce, sumRefri, sumWater, sumAlcool];
   const keys = ['sumMeet', 'sumBread', 'sumCoal', "sumSalt", 'sumIce', 'sumRefri', 'sumWater', 'sumAlcool'];
