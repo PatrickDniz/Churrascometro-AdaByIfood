@@ -1,14 +1,14 @@
-$primary: #0041c3;
-$primaryOpacity: #0041c345;
-
-// $primary: #A6F750;
-// $primaryOpacity: #a6f75045;
-// $secondary: #206AFF;
-
-$text: #fffbf0;
-
-$redAlert: #ff0000;
-$yellowAlert: #a6c300;
-
-$primaryBackground: #0c0e11;
-$secondaryBackground: #0F1216;
+body {
+  --primary: #0041c3;
+  --primaryOpacity: #0041c345;
+  --text: #0F1216;
+  --primaryBackground: #fff;
+  --secondaryBackground: #fbfbfb69;
+  &.dark{
+    --primary: #A6F750;
+    --primaryOpacity: #a6f75045;
+    --text: #fffbf0;
+    --primaryBackground: #0c0e11;
+    --secondaryBackground: #0F1216;
+  }
+}

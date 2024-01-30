@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-  <meta name="keywords" content="Lista Telefônica, List, Phone" />
+  <meta name="keywords" content="churrascometro" />
   <meta name="author" content="Patrick Diniz da Cunha" />
   <meta http-equiv="Content-Language" content="pt-BR" />
   <meta property="og:title" content="Churrascometro" />
-  <meta property="og:description" content="Churrascometro a lista telefônica feita na ada!!" />
+  <meta property="og:description" content="Churrascometro feito na ada!!" />
   <meta property="og:url" content="www.Churrascometro.com.br" />
   <meta property="og:phone_number" content="(11) 2609-3807" />
   <meta property="og:street-address" content=" Av. Brig. Faria Lima, 1306" />
   <meta property="og:locality" content="Pinheiros" />
   <meta property="og:region" content="SP" />
-  <meta property="og:email" content="ada@adatechbyifood.com.br" />
+  <meta property="og:email" content="patrick_dniz@outlook.com" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://www.Churrascometro.com.br/dist/img/logo.webp" />
 
@@ -28,7 +28,10 @@
     <section class="header-container">
         <nav class="header-navbar">
           <div class="header-navbar--top">
-              <span> toggle </span>
+              <div id="login">login</div>
+              <div id="themeButton">
+                <div class="dot"></div>
+              </div>
           </div>
           <div class="header-navbar--logo">
               <span> <strong> Churrascômetro </strong> </span>
@@ -36,6 +39,99 @@
         </nav>
     </section>
   </header>
+
+  <main class="main">
+    <div class="main_desc">
+      <h3 class="main_desc__item">Precisa de uma ajudinha com o churrasco? :)</h3>
+      <h3 class="main_desc__item">quantas pessoas vao participar?</h3>
+    </div>
+    <div class="main_qtd">
+      <div class="main_qtd__card" data-type="adultos">
+        <div class="main_qtd__card--title">Adultos</div>
+        <div class="main_qtd__card--value">0</div>
+        <div class="main_qtd__card--buttons">
+          <div class="main_qtd__card--buttons-less">-</div>
+          <div class="main_qtd__card--buttons-more">+</div>
+        </div>
+      </div>
+      <div class="main_qtd__card" data-type="criancas">
+        <div class="main_qtd__card--title">Crianças</div>
+        <div class="main_qtd__card--value">0</div>
+        <div class="main_qtd__card--buttons">
+          <div class="main_qtd__card--buttons-less">-</div>
+          <div class="main_qtd__card--buttons-more">+</div>
+        </div>
+      </div>
+      <div class="main_qtd__card" data-type="bebados">
+        <div class="main_qtd__card--title">quantos adultos são bebem?</div>
+        <div class="main_qtd__card--value">0</div>
+        <div class="main_qtd__card--buttons">
+          <div class="main_qtd__card--buttons-less">-</div>
+          <div class="main_qtd__card--buttons-more">+</div>
+        </div>
+      </div>
+      <div class="main_qtd__card" data-type="esfomeados">
+        <div class="main_qtd__card--title">Esfomeados</div>
+        <div class="main_qtd__card--value">0</div>
+        <div class="main_qtd__card--buttons">
+          <div class="main_qtd__card--buttons-less">-</div>
+          <div class="main_qtd__card--buttons-more">+</div>
+        </div>
+      </div>
+    </div>
+    <div class="main_button">Calcular</div>
+
+    <div class="main_result">
+      <div class="main_result__title">
+        <span>ITEM</span>
+        <span>QUANTIDADE</span>
+      </div>
+      <div class="main_result__item">
+        <div>Carne</div>
+        <div><div id="sumMeet"></div> Kg</div>
+      </div>
+      <div class="main_result__item">
+        <div>Pao de Alho</div>
+        <div><div id="sumBread"></div> Unidades</div>
+      </div>
+      <div class="main_result__item">
+        <div>Carvao</div>
+        <div><div id="sumCoal"></div> Kg</div>
+      </div>
+      <div class="main_result__item">
+        <div>Sal</div>
+        <div><div id="sumSalt"></div> Kg</div>
+      </div>
+      <div class="main_result__item">
+        <div>Gelo</div>
+        <div><div id="sumIce"></div> Kg</div>
+      </div>
+      <div class="main_result__item">
+        <div>Refrigerante</div>
+        <div><div id="sumRefri"></div> Litros</div>
+      </div>
+      <div class="main_result__item">
+        <div>Agua</div>
+        <div><div id="sumWater"></div> Litros</div>
+      </div>
+      <div class="main_result__item">
+        <div>Cerveja</div>
+        <div><div id="sumAlcool"></div> Unidades</div>
+      </div>
+    </div>
+
+    <div id="login-popup" aria-hidden="true">
+      <div class="login-popup--close">X</div>
+      <form action="/auth/login" method="post" id="loginForm">
+        <label for="username">Nome:</label>
+        <input type="text" name="username" placeholder="Usuário"/>
+        <label for="passwd">Senha:</label>
+        <input type="password" name="passwd" placeholder="Senha"/>
+        <div><a href="">esqueceu sua senha?</a> <a href="">usuario novo?</a></div>
+        <input type="submit" value="Login"/>
+      </form>
+    </div>
+  </main>
 
   <footer class="footer">
     <div class="footer-container">
@@ -123,7 +219,7 @@
       </div>
     </div>
   </footer>
-  <script type="module" src="dist/gameScript.js"></script>
+  <script type="module" src="dist/script.min.js"></script>
 </body>
 
 </html>

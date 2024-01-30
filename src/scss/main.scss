@@ -1,0 +1,164 @@
+@import './abstracts/index.scss';
+
+.main{
+  width: 1920px;
+  max-width: calc(100% - 20px);
+  margin: 0 auto;
+  &_desc{
+    margin-block: 20px;
+    text-align: center;
+    @include typhography(medium, 700, var(--text));
+  }
+  &_qtd{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    gap: 20px;
+    &__card{
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      height: 200px;
+      align-items: center;
+      justify-content: space-around;
+      background-color: var(--secondaryBackground);
+      border-radius: 6px;
+      box-shadow: 0 0 8px -2px var(--primaryOpacity);
+      &--title{
+        @include typhography(small, 700, var(--text));
+      }
+      &--value{
+        @include typhography(big, 700, var(--primary));
+      }
+      &--buttons{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 20px;
+        &-less,
+        &-more{
+          background: var(--primary);
+          color: var(--primaryBackground);
+          cursor: pointer;
+          border-radius: 6px;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover{
+            opacity: .6;
+          }
+        }
+      }
+    }
+    @media (max-width: 991px) {
+      width: 600px;
+      max-width: 100%;
+
+    }
+  }
+  &_button{
+    background: var(--primary);
+    color: var(--primaryBackground);
+    cursor: pointer;
+    border-radius: 6px;
+    padding-inline: 12px;
+    width: fit-content;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    &:hover{
+      opacity: .6;
+    }
+  }
+  &_result {
+    width: 600px;
+    margin: 20px auto;
+    max-width: calc(100% - 20px);
+    background-color: var(--secondaryBackground);
+    box-shadow: 0 0 8px -2px var(--primaryOpacity);
+    gap: 12px;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    &__title,
+    &__item{
+      @include typhography(small, 400, var(--text));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__item{
+      border-bottom: 1px solid var(--primaryOpacity);
+
+      div:last-child{
+        display: inline-flex;
+        gap: 4px;
+      }
+    }
+    &__title{
+      font-weight: 700;
+    }
+  }
+}
+
+#login-popup{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--primaryBackground);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .login-popup--close{
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    @include typhography(big, 700, var(--text));
+    &:hover{
+      color: var(--primary);
+    }
+  }
+  &[aria-hidden='true']{
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+  &[aria-hidden='false']{
+    opacity: 1;
+  }
+}
+
+#loginForm{
+  @include typhography(medium, 700, var(--primary));
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  input{
+    width: 200px;
+    padding: 10px;
+    background-color: var(--primaryBackground);
+    color: var(--primary);
+    outline: unset;
+    border-radius: 6px
+  }
+  a {
+    @include typhography(small, 700, var(--text));
+    text-decoration: none;
+    &:hover{
+      color: var(--primary);
+    }
+  }
+}

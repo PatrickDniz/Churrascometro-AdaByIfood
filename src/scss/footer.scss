@@ -1,8 +1,9 @@
-@import './abstracts/index.scss';   
+@import './abstracts/index.scss';
 
 .footer{
-    box-shadow: 0 0 8px -2px $primary;
+    box-shadow: 0 0 8px -2px var(--primaryOpacity);
     width: 100%;
+    margin-top: auto;
     &-container{
         max-width: calc(100% - 40px);
         width: 1250px;
@@ -11,10 +12,10 @@
         display: flex;
         justify-content: space-around;
         align-items: flex-start;
-        flex-wrap: wrap;  
+        flex-wrap: wrap;
         gap: 20px;
         padding: 20px 0;
-        
+
     }
     &-info{
         max-width: calc(100% - 20px);
@@ -31,23 +32,23 @@
         flex-direction: column;
         gap: 20px;
         svg path{
-            fill:  $text;
+            fill:  var(--text);
         }
         .info{
             &-title{
                 width: 100%;
-                @include typhography(medium, 700, $primary);
+                @include typhography(medium, 700, var(--primary));
             }
             &-item{
                 width: 100%;
-                @include typhography(small, 700, $text);
+                @include typhography(small, 700, var(--text));
                 text-decoration: none;
                 &.contact:hover{
                     svg path{
-                        fill:  $primary;
+                        fill:  var(--primary);
                     }
                     .contact-item{
-                        color: $primary;
+                        color: var(--primary);
                     }
                 }
             }
@@ -67,11 +68,11 @@
                 }
                 .social-item{
                     path{
-                        fill: $text;
+                        fill: var(--text);
                     }
                     &:hover{
                         path{
-                            fill: $primary;
+                            fill: var(--primary);
                         }
                     }
                 }
@@ -87,10 +88,10 @@
         padding: 12px 20px;
         gap: 12px;
         strong{
-            @include typhography(small, 900, $text);
+            @include typhography(small, 900, var(--text));
         }
         .copy-item{
-            @include typhography(small, 700, $primary);
+            @include typhography(small, 700, var(--primary));
         }
     }
 }

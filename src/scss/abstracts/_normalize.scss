@@ -8,9 +8,9 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td, 
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -22,12 +22,13 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
 	line-height: 1;
+  min-height: 100vh;
 }
 ol, ul {
 	list-style: none;
@@ -43,12 +44,12 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-} 
+}
 body{
     display: inline-flex;
     flex-direction: column;
-    position: absolute;  
-    background-color: $primaryBackground !important;
+    position: absolute;
+    background-color: var(--primaryBackground) !important;
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain;
@@ -58,7 +59,7 @@ body{
     overflow-y: auto;
 }
 
-main{ 
+main{
 	position: relative;
 }
 input::-webkit-search-cancel-button {
